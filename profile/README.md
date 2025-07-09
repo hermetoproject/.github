@@ -2,7 +2,7 @@
 
 - 🙋‍♀️ Hermeto is a CLI tool which pre-fetches your project's dependencies to
   aid in making your build process network-isolated
-- 🌈 Contribution guidelines - We're working on it 😁
+- 🌈 [Contribution guidelines][]
 - 👩‍💻 Useful resources
 
   - [Hermeto docs][]
@@ -24,6 +24,7 @@
   - Several of us are pretty good cooks 🍳
 
 [Cargo for Rust]: https://doc.rust-lang.org/cargo
+[Contribution guidelines]: https://github.com/hermetoproject/hermeto/blob/main/CONTRIBUTING.md
 [Czechia]: https://en.wikipedia.org/wiki/Czech_Republic
 [gomod]: https://go.dev/ref/mod
 [Hermeto docs]: https://hermetoproject.github.io/hermeto
