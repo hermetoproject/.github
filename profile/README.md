@@ -1,37 +1,29 @@
-# Hi there 👋, you're looking at the Hermeto Project
+# Hermeto Project
 
-- 🙋‍♀️ Hermeto is a CLI tool which pre-fetches your project's dependencies to
-  aid in making your build process network-isolated
-- 🌈 [Contribution guidelines][]
-- 👩‍💻 Useful resources
+Hermeto is a CLI tool that downloads your project's dependencies ahead of time
+so that container builds can run without network access. It also generates
+accurate SBOMs (Software Bill of Materials) covering every pre-fetched
+dependency, notably including every transitive dependency as well.
 
-  - [Hermeto docs][]
-  - [Cargo for Rust][]
-  - [gomod][]
-  - [npm for JavaScript][]
-  - [Python pip][]
-  - [pip-tools][], especially [pip-compile][]
-  - [Ruby bundler][]
-  - [Yarn for JavaScript][]
+## Why Hermeto exists
 
-- 🍿 Fun facts
+Without network isolation, builds can silently pull tampered packages, produce
+unreproducible artifacts, or hide dependencies from your audit trail. Hermeto
+solves this by fetching all declared dependencies ahead of time, verifying
+their integrity, and generating a complete software bill of materials.
 
-  - The bulk of the team, currently and historically, lives and works in
-  [Czechia][] / the [Slovak Republic][]
-  - Most of us like beer 🍻... a lot
-  - Many of us are photographers 📸 - good ones!
-  - Many of us are health-nuts (in spite of the beer); hiking, camping, etc.
-  - Several of us are pretty good cooks 🍳
+## Supported languages
 
-[Cargo for Rust]: https://doc.rust-lang.org/cargo
-[Contribution guidelines]: https://github.com/hermetoproject/hermeto/blob/main/CONTRIBUTING.md
-[Czechia]: https://en.wikipedia.org/wiki/Czech_Republic
-[gomod]: https://go.dev/ref/mod
-[Hermeto docs]: https://hermetoproject.github.io/hermeto
-[npm for JavaScript]: https://docs.npmjs.com
-[pip-compile]: https://pip-tools.readthedocs.io/en/stable/cli/pip-compile
-[pip-tools]: https://pip-tools.readthedocs.io
-[Python pip]: https://pip.pypa.io
-[Ruby bundler]: https://bundler.io
-[Slovak Republic]: https://en.wikipedia.org/wiki/Slovakia
-[Yarn for JavaScript]: https://yarnpkg.com/getting-started
+  - **Go**: gomod
+  - **Java**: maven (experimental)
+  - **JavaScript**: npm, pnpm, yarn (classic and berry)
+  - **Python**: pip
+  - **Ruby**: bundler
+  - **Rust**: cargo
+  - **Other**: rpm, generic
+
+## Get Involved
+
+For contributing, check out [CONTRIBUTING.md](../CONTRIBUTING.md).
+
+For AI-assisted contributions, make sure to comply with the [AI_CONTRIBUTION_POLICY.md](../AI_CONTRIBUTION_POLICY.md).
